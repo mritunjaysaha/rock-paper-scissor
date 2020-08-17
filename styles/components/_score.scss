@@ -1,13 +1,40 @@
 .score-container {
     display: flex;
     flex-direction: row;
-    background-color: #f00;
     width: 40vw;
+    padding: 1.5em;
+    border-radius: $radius;
+    border: 2px solid $HeaderOutline;
+    margin-top: 10vh;
 
     .logo {
         flex: 1;
         background-image: url(../../images/logo.svg);
         background-size: contain;
         background-repeat: no-repeat;
+    }
+
+    .score {
+        background-color: $ScoreBg;
+        width: 8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: $radius;
+
+        p {
+            margin: 0;
+
+            &:first-child {
+                padding-top: 0.5em;
+                color: $ScoreText;
+            }
+            &:last-child {
+                font-size: 3em;
+                font-weight: 700;
+                padding-bottom: 0.15em;
+                color: $HeaderOutline;
+            }
+        }
     }
 }
