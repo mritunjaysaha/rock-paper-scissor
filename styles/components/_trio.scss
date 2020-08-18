@@ -33,6 +33,10 @@
 
     @include respond(mobile) {
         margin-top: 15vh;
+
+        .circle-outer:first-child {
+            margin-right: 2em;
+        }
     }
 }
 

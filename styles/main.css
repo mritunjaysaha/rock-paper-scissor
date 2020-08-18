@@ -152,6 +152,9 @@ body {
   .trio-row-1 {
     margin-top: 15vh;
   }
+  .trio-row-1 .circle-outer:first-child {
+    margin-right: 2em;
+  }
 }
 
 .trio-row-2 {
