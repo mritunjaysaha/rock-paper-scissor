@@ -21,24 +21,28 @@
 }
 
 .trio-row-1 {
-    .paper-outer:first-child {
+    .circle-outer:first-child {
         margin-right: 4em;
     }
 }
-.paper-outer {
-    margin-top: 10vh;
 
+.trio-row-2 {
+    .circle-outer {
+        margin-top: 2vh;
+    }
+}
+.circle-outer {
+    margin-top: 14vh;
     display: block;
-    background: $PaperGradient;
     height: 10em;
     width: 10em;
     border-radius: 50%;
     text-align: center;
+    box-shadow: inset 0px -10px rgba(0, 0, 0, 0.2);
 
-    .paper {
+    .circle {
         display: inline-block;
         background-color: #fff;
-        background-image: url(../../images/icon-paper.svg);
         background-repeat: no-repeat;
         background-position: center;
         height: 7em;
@@ -46,5 +50,25 @@
         border-radius: 50%;
         position: relative;
         top: 1.5em;
+        box-shadow: inset 0px 10px rgba(0, 0, 0, 0.1);
     }
+
+    .paper {
+        background-image: url(../../images/icon-paper.svg);
+    }
+    .scissors {
+        background-image: url(../../images/icon-scissors.svg);
+    }
+    .rock {
+        background-image: url(../../images/icon-rock.svg);
+    }
+}
+.paper-outer {
+    background: $PaperGradient;
+}
+.scissors-outer {
+    background: $ScissorsGradient;
+}
+.rock-outer {
+    background: $RockGradient;
 }
