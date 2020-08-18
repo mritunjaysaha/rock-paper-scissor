@@ -68,11 +68,13 @@
     @include respond(mobile) {
         height: 9em;
         width: 9em;
+        box-shadow: inset 0px -5px rgba(0, 0, 0, 0.2);
 
         .circle {
             height: 7em;
             width: 7em;
             top: 1em;
+            box-shadow: inset 0px 5px rgba(0, 0, 0, 0.1);
         }
     }
 
