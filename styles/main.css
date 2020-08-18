@@ -150,7 +150,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .trio-row-1 {
-    margin-top: 15vh;
+    margin-top: 12vh;
   }
   .trio-row-1 .circle-outer:first-child {
     margin-right: 2em;
