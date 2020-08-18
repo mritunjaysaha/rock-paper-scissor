@@ -38,6 +38,11 @@
             }
         }
     }
+
+    @include respond(tablet) {
+        width: 60vw;
+    }
+
     @include respond(mobile) {
         margin-top: 5vh;
         width: 90vw;

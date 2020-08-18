@@ -9,9 +9,9 @@
     display: flex;
     flex-direction: column;
 
-    @include respond(mobile) {
-        width: 90vw;
-    }
+    // @include respond(mobile) {
+    //     width: 90vw;
+    // }
 }
 
 .trio-row-1,
@@ -31,13 +31,13 @@
         margin-right: 4em;
     }
 
-    @include respond(mobile) {
-        margin-top: 12vh;
+    // @include respond(mobile) {
+    //     margin-top: 12vh;
 
-        .circle-outer:first-child {
-            margin-right: 2em;
-        }
-    }
+    //     .circle-outer:first-child {
+    //         margin-right: 2em;
+    //     }
+    // }
 }
 
 .trio-row-2 {
@@ -65,16 +65,16 @@
         box-shadow: inset 0px 10px rgba(0, 0, 0, 0.1);
     }
 
-    @include respond(mobile) {
-        height: 9em;
-        width: 9em;
+    // @include respond(mobile) {
+    //     height: 9em;
+    //     width: 9em;
 
-        .circle {
-            height: 7em;
-            width: 7em;
-            top: 1em;
-        }
-    }
+    //     .circle {
+    //         height: 7em;
+    //         width: 7em;
+    //         top: 1em;
+    //     }
+    // }
 
     .paper {
         background-image: url(../../images/icon-paper.svg);
