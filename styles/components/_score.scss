@@ -12,6 +12,7 @@
         background-image: url(../../images/logo.svg);
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: left center;
     }
 
     .score {
@@ -35,6 +36,13 @@
                 padding-bottom: 0.15em;
                 color: $HeaderOutline;
             }
+        }
+    }
+    @include respond(mobile) {
+        margin-top: 5vh;
+        width: 90vw;
+        .logo {
+            background-size: 16vh;
         }
     }
 }

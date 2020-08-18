@@ -2,12 +2,16 @@
     flex: 1;
     width: 100%;
     background-image: url(../../images/bg-triangle.svg);
-    background-size: 15%;
+    background-size: 16em;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0;
     display: flex;
     flex-direction: column;
+
+    @include respond(mobile) {
+        width: 90vw;
+    }
 }
 
 .trio-row-1,
@@ -21,18 +25,22 @@
 }
 
 .trio-row-1 {
+    margin-top: 12vh;
+    z-index: 0;
     .circle-outer:first-child {
         margin-right: 4em;
+    }
+
+    @include respond(mobile) {
+        margin-top: 15vh;
     }
 }
 
 .trio-row-2 {
-    .circle-outer {
-        margin-top: 2vh;
-    }
+    position: relative;
+    top: 4vh;
 }
 .circle-outer {
-    margin-top: 14vh;
     display: block;
     height: 10em;
     width: 10em;
@@ -51,6 +59,17 @@
         position: relative;
         top: 1.5em;
         box-shadow: inset 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @include respond(mobile) {
+        height: 9em;
+        width: 9em;
+
+        .circle {
+            height: 7em;
+            width: 7em;
+            top: 1em;
+        }
     }
 
     .paper {
