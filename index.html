@@ -2,63 +2,93 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
-  <link rel="stylesheet" href="./styles/main.css">
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./styles/main.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
 
 <body>
 
-  <header class="score-container">
-    <div class="logo"></div>
-    <div class="score">
-      <p>SCORE</p>
-      <p id="score">00</p>
-    </div>
-  </header>
+    <header class="score-container">
+        <div class="logo"></div>
+        <div class="score">
+            <p>SCORE</p>
+            <p id="score">00</p>
+        </div>
+    </header>
 
-  <section class="trio">
-    <article class="trio-row-1">
-      <div class="circle-outer paper-outer">
-        <span class="circle paper">
-        </span>
-      </div>
-      <div class="circle-outer scissors-outer">
-        <span class="circle scissors">
-        </span>
-      </div>
-    </article>
+    <!-- Starting section -->
+    <section id="start" class="trio" style="display: none;">
+        <article class="trio-row-1">
+            <div class="circle-outer paper-outer" data-val="paper">
+                <span class="circle paper" data-val="paper">
+                </span>
+            </div>
+            <div class="circle-outer scissors-outer" data-val="scissors">
+                <span class="circle scissors" data-val="scissors">
+                </span>
+            </div>
+        </article>
 
-    <article class="trio-row-2">
-      <div class="circle-outer rock-outer">
-        <span class="circle rock">
-        </span>
-      </div>
-    </article>
-  </section>
+        <article class="trio-row-2">
+            <div class="circle-outer rock-outer" data-val="rock">
+                <span class="circle rock" data-val="rock">
+                </span>
+            </div>
+        </article>
+    </section>
 
-  <footer class="attribution" style="display: none;">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>
-  </footer>
+    <!-- Active Game section -->
+    <section id="active">
+        <article>
+            <p class="circle-info">you picked</p>
+            <div class="circle-outer paper-outer" data-val="paper">
+                <span class="circle paper" data-val="paper">
+                </span>
+            </div>
+        </article>
+        <div class="play-again">
+            <p id="play-again-text">you win</p>
+            <button>play again</button>
+        </div>
+        <article>
+            <p class="circle-info">the house picked</p>
+            <div class="circle-outer scissors-outer" data-val="scissors">
+                <span class="circle scissors" data-val="scissors">
+                </span>
+            </div>
+        </article>
+    </section>
 
+    <section class="rules">
+        <button>
+            rules
+        </button>
+    </section>
+    <footer class="attribution" style="display: none;">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>
+    </footer>
+
+
+    <script src="./src/index.js"></script>
 </body>
 
 </html>

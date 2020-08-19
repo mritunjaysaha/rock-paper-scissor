@@ -25,7 +25,7 @@
 }
 
 .trio-row-1 {
-    margin-top: 12vh;
+    margin-top: 10vh;
     z-index: 0;
     .circle-outer:first-child {
         margin-right: 4em;
@@ -71,8 +71,6 @@
         box-shadow: inset 0px -5px rgba(0, 0, 0, 0.2);
 
         .circle {
-            height: 7em;
-            width: 7em;
             top: 1em;
             box-shadow: inset 0px 5px rgba(0, 0, 0, 0.1);
         }

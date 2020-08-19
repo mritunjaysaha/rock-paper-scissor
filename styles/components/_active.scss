@@ -1,0 +1,80 @@
+#active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 80vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fafafa;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+
+    .circle-info {
+        padding-bottom: 2em;
+    }
+
+    .play-again {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 4em;
+        p {
+            font-size: 3em;
+            margin-bottom: 0.15em;
+            color: #fafafa;
+            text-shadow: 4px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            text-transform: uppercase;
+            font-size: 0.8em;
+            padding: 0.5em;
+            letter-spacing: 0.2em;
+            text-align: center;
+            color: $ScoreText;
+            border-radius: 5px;
+            border: none;
+            font-weight: 600;
+        }
+    }
+
+    .paper {
+        background-image: url(../../images/icon-paper.svg);
+    }
+    .scissors {
+        background-image: url(../../images/icon-scissors.svg);
+    }
+    .rock {
+        background-image: url(../../images/icon-rock.svg);
+    }
+
+    .paper,
+    .scissors,
+    .rock {
+        background-size: 50%;
+    }
+
+    .circle-outer {
+        display: block;
+        height: 16em;
+        width: 16em;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: inset 0px -10px rgba(0, 0, 0, 0.2);
+        margin: 0 1em;
+        .circle {
+            display: inline-block;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 12em;
+            width: 12em;
+            border-radius: 50%;
+            position: relative;
+            top: 2em;
+            box-shadow: inset 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
