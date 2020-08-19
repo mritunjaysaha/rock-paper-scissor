@@ -1,12 +1,11 @@
-function RockPaperScissors(start, score, active, players, result) {
+function RockPaperScissors(start, score, active, players, result, playAgain) {
     this.start = document.querySelector(start);
     this.score = document.querySelector(score);
     this.active = document.querySelector(active);
-
     this.player = document.querySelector(players.player);
     this.house = document.querySelector(players.house);
-
     this.result = document.querySelector(result);
+    this.playAgain = document.querySelector(playAgain);
 
     this.playerCard = "";
     this.houseCard = "";
@@ -14,6 +13,10 @@ function RockPaperScissors(start, score, active, players, result) {
     this.bindEvents();
 }
 
+/**
+ * Binds the starting cards section and
+ * the play again button to respond when they are clicked
+ */
 RockPaperScissors.prototype.bindEvents = function () {
     this.start.addEventListener("click", (e) => {
         const selected = e.target.dataset["val"];
@@ -29,7 +32,16 @@ RockPaperScissors.prototype.bindEvents = function () {
 
         this.decideWinner();
     });
+
+    this.playAgain.addEventListener("click", () => {
+        this.start.style.display = "flex";
+        this.active.style.display = "none";
+
+        this.removeCards();
+    });
 };
+
+RockPaperScissors.prototype.removeCards = function () {};
 
 RockPaperScissors.prototype.decideWinner = function () {
     if (this.playerCard === this.houseCard) {
@@ -54,9 +66,12 @@ RockPaperScissors.prototype.decideWinner = function () {
 };
 
 RockPaperScissors.prototype.addPickedCards = function (element, selected) {
-    element.classList.remove("placeholder-outer");
+    element.classList = "";
     element.classList.add("circle-outer");
     element.classList.add(`${selected}-outer`);
+    element.innerHTML = "";
+
+    console.log({ element });
     const spanElem = document.createElement("span");
 
     spanElem.classList.add("circle");
@@ -72,7 +87,7 @@ RockPaperScissors.prototype.housePickCards = function () {
 
     this.houseCard = game[selected];
 
-    this.addPickedCards(this.house, this.houseCard);
+    this.addPickedCards(this.house, game[selected]);
 };
 
 RockPaperScissors.prototype.getRandomInt = function (max) {
@@ -87,5 +102,6 @@ new RockPaperScissors(
         player: "#player",
         house: "#house",
     },
-    "#play-again-text"
+    "#play-again-text",
+    "#play-again-btn"
 );
