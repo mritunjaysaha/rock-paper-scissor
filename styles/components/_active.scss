@@ -20,7 +20,7 @@
         flex-direction: column;
         text-align: center;
         padding: 0 4em;
-        p {
+        h1 {
             font-size: 3em;
             margin-bottom: 0.15em;
             color: #fafafa;
@@ -34,9 +34,21 @@
             letter-spacing: 0.2em;
             text-align: center;
             color: $ScoreText;
+            background: #fafafa;
             border-radius: 5px;
-            border: none;
+            border: 1px solid #fafafa;
             font-weight: 600;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+            &:hover {
+                color: #fafafa;
+                background: $ScoreText;
+            }
+
+            &:focus {
+                outline: none;
+                border: 1px solid $ScoreText;
+            }
         }
     }
 
