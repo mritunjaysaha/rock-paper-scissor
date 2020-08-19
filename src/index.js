@@ -19,18 +19,17 @@ function RockPaperScissors(start, score, active, players, result, playAgain) {
  */
 RockPaperScissors.prototype.bindEvents = function () {
     this.start.addEventListener("click", (e) => {
-        const selected = e.target.dataset["val"];
+        this.playerCard = e.target.dataset["val"];
+        if (this.playerCard) {
+            this.start.style.display = "none";
+            this.active.style.display = "flex";
 
-        this.playerCard = selected;
+            this.addPickedCards(this.player, this.playerCard);
 
-        this.start.style.display = "none";
-        this.active.style.display = "flex";
+            this.housePickCards();
 
-        this.addPickedCards(this.player, this.playerCard);
-
-        this.housePickCards();
-
-        this.decideWinner();
+            this.decideWinner();
+        }
     });
 
     this.playAgain.addEventListener("click", () => {
@@ -41,12 +40,13 @@ RockPaperScissors.prototype.bindEvents = function () {
     });
 };
 
-RockPaperScissors.prototype.removeCards = function () {};
-
+/**
+ * Decides the winner between the house and the player.
+ * rock beats scissors, scissors beats paper, paper beats rock
+ */
 RockPaperScissors.prototype.decideWinner = function () {
     if (this.playerCard === this.houseCard) {
         this.result.innerText = "draw";
-        console.log("draw");
     } else if (
         (this.playerCard === "rock" && this.houseCard === "scissors") ||
         (this.playerCard === "scissors" && this.houseCard === "paper") ||
@@ -65,13 +65,17 @@ RockPaperScissors.prototype.decideWinner = function () {
             : this.currentScore;
 };
 
+/**
+ * Adds classes to the player and the house
+ * @param {DOMElement} element the classes will be added to this element
+ * @param {String} selected the type of classes that will be added to the element
+ */
 RockPaperScissors.prototype.addPickedCards = function (element, selected) {
     element.classList = "";
     element.classList.add("circle-outer");
     element.classList.add(`${selected}-outer`);
     element.innerHTML = "";
 
-    console.log({ element });
     const spanElem = document.createElement("span");
 
     spanElem.classList.add("circle");
@@ -79,7 +83,11 @@ RockPaperScissors.prototype.addPickedCards = function (element, selected) {
 
     element.appendChild(spanElem);
 };
-
+/**
+ * Randomly genareates a number between 0 - 3,
+ * Selects the name of the card based on the number
+ * and passes to the addPickedCards()
+ */
 RockPaperScissors.prototype.housePickCards = function () {
     const game = { 0: "rock", 1: "paper", 2: "scissors" };
 
@@ -89,7 +97,10 @@ RockPaperScissors.prototype.housePickCards = function () {
 
     this.addPickedCards(this.house, game[selected]);
 };
-
+/**
+ * Generates random number between 0 and max
+ * @param {Number} max
+ */
 RockPaperScissors.prototype.getRandomInt = function (max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
