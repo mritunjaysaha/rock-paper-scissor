@@ -24,8 +24,12 @@ body {
 
 .rules {
     position: absolute;
-    right: 2vw;
+    right: 34vw;
     bottom: 4vh;
+
+    @include respond(mobile) {
+    }
+
     button {
         background: none;
         border: 1px solid #fafafa;

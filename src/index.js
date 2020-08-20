@@ -35,8 +35,6 @@ RockPaperScissors.prototype.bindEvents = function () {
     this.playAgain.addEventListener("click", () => {
         this.start.style.display = "flex";
         this.active.style.display = "none";
-
-        this.removeCards();
     });
 };
 

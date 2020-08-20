@@ -35,7 +35,7 @@
     </header>
 
     <!-- Starting section -->
-    <section id="start" class="trio">
+    <section id="start" class="trio" style="display: none;">
         <article class="trio-row-1">
             <div class="circle-outer paper-outer" data-val="paper">
                 <span class="circle paper" data-val="paper">
@@ -56,18 +56,18 @@
     </section>
 
     <!-- Active Game section -->
-    <section id="active" style="display: none;">
-        <article>
+    <section id="active">
+        <article class="circle-container arrange">
             <p class="circle-info">you picked</p>
             <div id="player" class="placeholder-outer">
                 <span id="player-span"></span>
             </div>
         </article>
-        <div class="play-again">
+        <div class="play-again arrange">
             <h1 id="play-again-text">you win</h1>
             <button id="play-again-btn">play again</button>
         </div>
-        <article>
+        <article class="circle-container arrange">
             <p class="circle-info">the house picked</p>
             <div id="house" class="placeholder-outer">
                 <span id="house-span"></span>

@@ -1,6 +1,7 @@
 #active {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 60vh;
@@ -97,5 +98,67 @@
         margin: 2em;
         border-radius: 50%;
         background: rgba(0, 0, 0, 0.3);
+    }
+
+    @include respond(mobile) {
+        height: max-content;
+        width: 100vw;
+        margin-top: 12vh;
+        background: #f00;
+        justify-content: space-around;
+        p {
+            font-size: 0.8em;
+        }
+
+        .circle-info {
+            padding-bottom: 0;
+        }
+
+        .play-again {
+            padding: 0;
+        }
+
+        .circle-outer {
+            height: 10em;
+            width: 10em;
+
+            .circle {
+                height: 7em;
+                width: 7em;
+                top: 1.5em;
+            }
+        }
+
+        .placeholder-outer {
+            height: 7em;
+            width: 7em;
+            margin: 0;
+        }
+
+        .circle-container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .arrange {
+            display: flex;
+            background: #f00;
+
+            &:nth-child(1) {
+                order: 1;
+            }
+            &:nth-child(2) {
+                order: 3;
+            }
+            &:nth-child(3) {
+                order: 2;
+            }
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+        }
     }
 }

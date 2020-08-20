@@ -46,6 +46,7 @@
     @include respond(mobile) {
         margin-top: 5vh;
         width: 90vw;
+        padding: 0.8em;
         .logo {
             background-size: 16vh;
         }
