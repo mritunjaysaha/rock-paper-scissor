@@ -52,18 +52,17 @@ RockPaperScissors.prototype.decideWinner = function () {
     ) {
         this.result.innerText = "you win";
         this.currentScore++;
+        this.addRippleEffect(this.player);
     } else {
         this.result.innerText = "you lose";
         this.currentScore--;
+        this.addRippleEffect(this.house);
     }
 
     this.score.innerText =
         this.currentScore < 10 && this.currentScore >= 0
             ? "0" + this.currentScore
             : this.currentScore;
-
-    this.addRippleEffect(this.player);
-    this.addRippleEffect(this.house);
 };
 
 RockPaperScissors.prototype.addRippleEffect = function (element) {
@@ -76,7 +75,7 @@ RockPaperScissors.prototype.addRippleEffect = function (element) {
         fragment.appendChild(spanElem);
     }
 
-    element.appendChild(fragment);
+    element.prepend(fragment);
 };
 
 /**
@@ -90,14 +89,12 @@ RockPaperScissors.prototype.addPickedCards = function (element, selected) {
     element.classList.add(`${selected}-outer`);
     element.innerHTML = "";
 
-    const fragment = document.createDocumentFragment();
     const spanElem = document.createElement("span");
 
     spanElem.classList.add("circle");
     spanElem.classList.add(`${selected}`);
-    fragment.appendChild(spanElem);
 
-    element.appendChild(fragment);
+    element.appendChild(spanElem);
 };
 /**
  * Randomly genareates a number between 0 - 3,
