@@ -205,6 +205,23 @@ body p {
   }
 }
 
+@media only screen and (max-width: 300px) {
+  .score-container {
+    padding: 0.4em;
+  }
+  .score-container .score {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .score-container .score p:first-child {
+    padding-top: 0.75em;
+  }
+}
+
 .trio {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -226,7 +243,8 @@ body p {
 
 @media only screen and (max-width: 600px) {
   .trio {
-    width: 90vw;
+    width: 100vw;
+    background-size: 70%;
   }
 }
 
@@ -262,16 +280,22 @@ body p {
 
 @media only screen and (max-width: 600px) {
   .trio-row-1 {
-    margin-top: 12vh;
+    margin-top: 16vh;
   }
   .trio-row-1 .circle-outer:first-child {
-    margin-right: 2em;
+    margin-right: 5vh;
   }
 }
 
 .trio-row-2 {
   position: relative;
   top: 4vh;
+}
+
+@media only screen and (max-width: 300px) {
+  .trio-row-2 {
+    top: 2vh;
+  }
 }
 
 .circle-outer {
@@ -300,13 +324,15 @@ body p {
 
 @media only screen and (max-width: 600px) {
   .circle-outer {
-    height: 9em;
-    width: 9em;
+    height: 18vh;
+    width: 18vh;
     -webkit-box-shadow: inset 0px -5px rgba(0, 0, 0, 0.2);
             box-shadow: inset 0px -5px rgba(0, 0, 0, 0.2);
   }
   .circle-outer .circle {
-    top: 1em;
+    height: 14vh;
+    width: 14vh;
+    top: 2vh;
     -webkit-box-shadow: inset 0px 5px rgba(0, 0, 0, 0.1);
             box-shadow: inset 0px 5px rgba(0, 0, 0, 0.1);
   }

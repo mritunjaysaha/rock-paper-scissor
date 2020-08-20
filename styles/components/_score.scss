@@ -52,4 +52,19 @@
             background-size: 16vh;
         }
     }
+
+    @include respond(small-mobile) {
+        padding: 0.4em;
+
+        .score {
+            flex: 1;
+            width: max-content;
+
+            p {
+                &:first-child {
+                    padding-top: 0.75em;
+                }
+            }
+        }
+    }
 }

@@ -10,7 +10,8 @@
     flex-direction: column;
 
     @include respond(mobile) {
-        width: 90vw;
+        width: 100vw;
+        background-size: 70%;
     }
 }
 
@@ -32,10 +33,10 @@
     }
 
     @include respond(mobile) {
-        margin-top: 12vh;
+        margin-top: 16vh;
 
         .circle-outer:first-child {
-            margin-right: 2em;
+            margin-right: 5vh;
         }
     }
 }
@@ -43,6 +44,16 @@
 .trio-row-2 {
     position: relative;
     top: 4vh;
+
+    @include respond(mobile) {
+        // top: 2vh;
+        // top: 0;
+        // bottom: -8vh;
+    }
+
+    @include respond(small-mobile) {
+        top: 2vh;
+    }
 }
 .circle-outer {
     display: block;
@@ -66,12 +77,14 @@
     }
 
     @include respond(mobile) {
-        height: 9em;
-        width: 9em;
+        height: 18vh;
+        width: 18vh;
         box-shadow: inset 0px -5px rgba(0, 0, 0, 0.2);
 
         .circle {
-            top: 1em;
+            height: 14vh;
+            width: 14vh;
+            top: 2vh;
             box-shadow: inset 0px 5px rgba(0, 0, 0, 0.1);
         }
     }
