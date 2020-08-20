@@ -26,13 +26,11 @@ body {
     position: absolute;
     right: 3vw;
     bottom: 4vh;
-
+    width: 8em;
     @include respond(mobile) {
-        // right: 0;
-        // bottom: 0;
         position: fixed;
-
-        margin: 0 auto;
+        right: 50%;
+        margin-right: -4.1em;
     }
 
     button {
