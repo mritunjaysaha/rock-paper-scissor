@@ -24,10 +24,15 @@ body {
 
 .rules {
     position: absolute;
-    right: 34vw;
+    right: 3vw;
     bottom: 4vh;
 
     @include respond(mobile) {
+        // right: 0;
+        // bottom: 0;
+        position: fixed;
+
+        margin: 0 auto;
     }
 
     button {

@@ -34,8 +34,15 @@ body p {
 
 .rules {
   position: absolute;
-  right: 34vw;
+  right: 3vw;
   bottom: 4vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .rules {
+    position: fixed;
+    margin: 0 auto;
+  }
 }
 
 .rules button {
@@ -149,6 +156,9 @@ body p {
 }
 
 .score-container .score {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #f3f4f5;
   width: 8em;
   display: -webkit-box;
@@ -188,7 +198,7 @@ body p {
 
 @media only screen and (max-width: 600px) {
   .score-container {
-    margin-top: 5vh;
+    margin-top: 4vh;
     width: 90vw;
     padding: 0.8em;
   }
@@ -464,7 +474,7 @@ body p {
     height: -moz-max-content;
     height: max-content;
     width: 100vw;
-    margin-top: 12vh;
+    margin-top: 8vh;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }

@@ -16,6 +16,7 @@
     }
 
     .score {
+        flex: 1;
         background-color: $ScoreBg;
         width: 8em;
         display: flex;
@@ -44,7 +45,7 @@
     }
 
     @include respond(mobile) {
-        margin-top: 5vh;
+        margin-top: 4vh;
         width: 90vw;
         padding: 0.8em;
         .logo {
