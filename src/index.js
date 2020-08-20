@@ -61,6 +61,22 @@ RockPaperScissors.prototype.decideWinner = function () {
         this.currentScore < 10 && this.currentScore >= 0
             ? "0" + this.currentScore
             : this.currentScore;
+
+    this.addRippleEffect(this.player);
+    this.addRippleEffect(this.house);
+};
+
+RockPaperScissors.prototype.addRippleEffect = function (element) {
+    const fragment = document.createDocumentFragment();
+    for (i = 0; i < 4; i++) {
+        const spanElem = document.createElement("span");
+        spanElem.classList.add("ripple");
+        spanElem.style.animationDuration = `${i * 2}s`;
+
+        fragment.appendChild(spanElem);
+    }
+
+    element.appendChild(fragment);
 };
 
 /**
@@ -74,12 +90,14 @@ RockPaperScissors.prototype.addPickedCards = function (element, selected) {
     element.classList.add(`${selected}-outer`);
     element.innerHTML = "";
 
+    const fragment = document.createDocumentFragment();
     const spanElem = document.createElement("span");
 
     spanElem.classList.add("circle");
     spanElem.classList.add(`${selected}`);
+    fragment.appendChild(spanElem);
 
-    element.appendChild(spanElem);
+    element.appendChild(fragment);
 };
 /**
  * Randomly genareates a number between 0 - 3,

@@ -587,8 +587,8 @@ body p {
     height: 16vh;
     width: 16vh;
     top: 2vh;
-    -webkit-box-shadow: inset 0px 6px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0px 6px rgba(0, 0, 0, 0.1);
   }
   #active .placeholder-outer {
     height: 7em;
