@@ -31,7 +31,7 @@
         button {
             text-transform: uppercase;
             font-size: 0.8em;
-            padding: 0.5em;
+            padding: 1em 0.5em;
             letter-spacing: 0.2em;
             text-align: center;
             color: $ScoreText;
@@ -41,6 +41,7 @@
             font-weight: 600;
             transition-duration: 0.4s;
             transition-timing-function: linear;
+
             &:hover {
                 color: #fafafa;
                 background: $ScoreText;
@@ -119,13 +120,17 @@
         }
 
         .circle-outer {
-            height: 10em;
-            width: 10em;
+            height: 20vh;
+            width: 20vh;
+            margin: 0;
+
+            box-shadow: inset 0px -6px rgba(0, 0, 0, 0.2);
 
             .circle {
-                height: 7em;
-                width: 7em;
-                top: 1.5em;
+                height: 16vh;
+                width: 16vh;
+                top: 2vh;
+                box-shadow: inset 0px 6px rgba(0, 0, 0, 0.2);
             }
         }
 
@@ -142,7 +147,7 @@
 
         .arrange {
             display: flex;
-
+            margin: 0;
             &:nth-child(1) {
                 order: 1;
             }

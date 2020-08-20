@@ -158,9 +158,6 @@ body p {
 }
 
 .score-container .score {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   background-color: #f3f4f5;
   width: 8em;
   display: -webkit-box;
@@ -170,14 +167,13 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 10px;
+  text-align: center;
 }
 
 .score-container .score p {
   margin: 0;
+  font-weight: 700;
 }
 
 .score-container .score p:first-child {
@@ -394,7 +390,7 @@ body p {
 #active .play-again button {
   text-transform: uppercase;
   font-size: 0.8em;
-  padding: 0.5em;
+  padding: 1em 0.5em;
   letter-spacing: 0.2em;
   text-align: center;
   color: #2a46c0;
@@ -490,13 +486,18 @@ body p {
     padding: 0;
   }
   #active .circle-outer {
-    height: 10em;
-    width: 10em;
+    height: 20vh;
+    width: 20vh;
+    margin: 0;
+    -webkit-box-shadow: inset 0px -6px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0px -6px rgba(0, 0, 0, 0.2);
   }
   #active .circle-outer .circle {
-    height: 7em;
-    width: 7em;
-    top: 1.5em;
+    height: 16vh;
+    width: 16vh;
+    top: 2vh;
+    -webkit-box-shadow: inset 0px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0px 6px rgba(0, 0, 0, 0.2);
   }
   #active .placeholder-outer {
     height: 7em;
@@ -516,6 +517,7 @@ body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: 0;
   }
   #active .arrange:nth-child(1) {
     -webkit-box-ordinal-group: 2;
