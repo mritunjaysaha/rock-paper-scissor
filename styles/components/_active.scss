@@ -104,7 +104,7 @@
         height: max-content;
         width: 100vw;
         margin-top: 12vh;
-        background: #f00;
+
         justify-content: space-around;
         p {
             font-size: 0.8em;
@@ -142,7 +142,6 @@
 
         .arrange {
             display: flex;
-            background: #f00;
 
             &:nth-child(1) {
                 order: 1;

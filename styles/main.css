@@ -465,7 +465,6 @@ body p {
     height: max-content;
     width: 100vw;
     margin-top: 12vh;
-    background: #f00;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -505,7 +504,6 @@ body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #f00;
   }
   #active .arrange:nth-child(1) {
     -webkit-box-ordinal-group: 2;
