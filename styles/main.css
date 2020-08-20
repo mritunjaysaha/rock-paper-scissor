@@ -650,6 +650,12 @@ body p {
   z-index: -10;
 }
 
+@media only screen and (max-width: 1200px) {
+  .ripple {
+    display: none;
+  }
+}
+
 @-webkit-keyframes scaleIn {
   from {
     -webkit-transform: scale(1, 1);

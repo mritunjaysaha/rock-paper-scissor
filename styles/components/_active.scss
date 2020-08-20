@@ -169,7 +169,6 @@
 .ripple {
     display: inline-block;
     position: absolute;
-    // right: 100px;
     bottom: 12em;
     border-radius: 50%;
     background-color: deepskyblue !important;
@@ -178,6 +177,10 @@
     opacity: 0;
     animation: scaleIn 6s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
     z-index: -10;
+
+    @include respond(tablet) {
+        display: none;
+    }
 }
 
 @keyframes scaleIn {
