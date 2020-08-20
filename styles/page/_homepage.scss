@@ -69,10 +69,30 @@ body {
     z-index: 100;
     background: rgba(0, 0, 0, 0.4);
 
-    div {
+    .modal {
+        display: flex;
+        flex-wrap: wrap;
         background: #fafafa;
-        padding: 1em 0;
+        padding: 1em;
         border-radius: $radius;
+        width: 22vw;
+    }
+
+    .modal-element {
+        &:nth-child(1) {
+            order: 1;
+        }
+        &:nth-child(2) {
+            order: 3;
+        }
+        &:nth-child(3) {
+            order: 1;
+        }
+        &:nth-child(1),
+        &:nth-child(3) {
+            flex-direction: row;
+            justify-content: left;
+        }
     }
 
     p {
@@ -91,6 +111,35 @@ body {
         img {
             height: max-content;
             width: max-content;
+        }
+    }
+
+    @include respond(mobile) {
+        .modal {
+            height: 100vh;
+            width: 100vw;
+
+            flex-direction: column;
+            padding: 2em 0;
+            background: #fafafa;
+
+            img {
+                &:first-child {
+                    width: 80vw;
+                }
+            }
+        }
+
+        .modal-element {
+            &:nth-child(1) {
+                order: 1;
+            }
+            &:nth-child(2) {
+                order: 2;
+            }
+            &:nth-child(3) {
+                order: 3;
+            }
         }
     }
 }
