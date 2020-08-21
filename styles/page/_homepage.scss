@@ -22,6 +22,10 @@ body {
     }
 }
 
+button {
+    cursor: pointer;
+}
+
 .rules {
     position: absolute;
     right: 3vw;
@@ -73,9 +77,9 @@ body {
         display: flex;
         flex-wrap: wrap;
         background: #fafafa;
-        padding: 1em;
+        padding: 1em 2em 2em 2em;
         border-radius: $radius;
-        width: 22vw;
+        width: 24vw;
     }
 
     .modal-element {

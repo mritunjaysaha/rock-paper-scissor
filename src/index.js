@@ -65,12 +65,16 @@ RockPaperScissors.prototype.decideWinner = function () {
             : this.currentScore;
 };
 
+/**
+ *
+ * @param {DOMElement} element
+ */
 RockPaperScissors.prototype.addRippleEffect = function (element) {
     const fragment = document.createDocumentFragment();
     for (i = 0; i < 4; i++) {
         const spanElem = document.createElement("span");
         spanElem.classList.add("ripple");
-        spanElem.style.animationDuration = `${i * 2}s`;
+        spanElem.style.animationDuration = `${i * 2.5}s`;
 
         fragment.appendChild(spanElem);
     }

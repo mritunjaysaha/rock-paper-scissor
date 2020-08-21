@@ -32,6 +32,10 @@ body p {
   letter-spacing: 0.2em;
 }
 
+button {
+  cursor: pointer;
+}
+
 .rules {
   position: absolute;
   right: 3vw;
@@ -101,9 +105,9 @@ body p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: #fafafa;
-  padding: 1em;
+  padding: 1em 2em 2em 2em;
   border-radius: 10px;
-  width: 22vw;
+  width: 24vw;
 }
 
 .rules-modal .modal-element:nth-child(1) {
@@ -371,6 +375,7 @@ body p {
   text-align: center;
   -webkit-box-shadow: inset 0px -10px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0px -10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .circle-outer .circle {
