@@ -34,6 +34,7 @@ button {
     @include respond(mobile) {
         position: fixed;
         right: 50%;
+        bottom: 8vh;
         margin-right: -4.1em;
     }
 
@@ -149,10 +150,17 @@ button {
 }
 
 .attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: $HeaderOutline;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     color: #fafafa;
-    padding-bottom: 1em;
+    font-weight: 600;
+    padding-bottom: 0.25em;
     a {
-        // text-decoration: none;
         color: #f3f3f3;
     }
 }

@@ -15,7 +15,8 @@ function RockPaperScissors(start, score, active, players, result, playAgain) {
 
 /**
  * Binds the starting cards section and
- * the play again button to respond when they are clicked
+ * the play again button to respond when
+ * they are clicked
  */
 RockPaperScissors.prototype.bindEvents = function () {
     this.start.addEventListener("click", (e) => {
@@ -66,7 +67,7 @@ RockPaperScissors.prototype.decideWinner = function () {
 };
 
 /**
- * Adds ripple effect to the emelent that is passed
+ * Adds ripple effect to the DOM element
  * @param {DOMElement} element
  */
 RockPaperScissors.prototype.addRippleEffect = function (element) {
@@ -74,7 +75,7 @@ RockPaperScissors.prototype.addRippleEffect = function (element) {
     for (i = 0; i < 4; i++) {
         const spanElem = document.createElement("span");
         spanElem.classList.add("ripple");
-        spanElem.style.animationDuration = `${i * 4.5}s`;
+        spanElem.style.animationDuration = `${i * 2.5}s`;
 
         fragment.appendChild(spanElem);
     }
