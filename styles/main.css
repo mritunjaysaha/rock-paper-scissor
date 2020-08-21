@@ -201,6 +201,15 @@ button {
   }
 }
 
+.attribution {
+  color: #fafafa;
+  padding-bottom: 1em;
+}
+
+.attribution a {
+  color: #f3f3f3;
+}
+
 .score-container {
   display: -webkit-box;
   display: -ms-flexbox;
