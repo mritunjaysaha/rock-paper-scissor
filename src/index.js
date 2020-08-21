@@ -74,7 +74,7 @@ RockPaperScissors.prototype.addRippleEffect = function (element) {
     for (i = 0; i < 4; i++) {
         const spanElem = document.createElement("span");
         spanElem.classList.add("ripple");
-        spanElem.style.animationDuration = `${i * 2.5}s`;
+        spanElem.style.animationDuration = `${i * 4.5}s`;
 
         fragment.appendChild(spanElem);
     }

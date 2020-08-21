@@ -653,6 +653,7 @@ button {
   -webkit-animation: scaleIn 6s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
           animation: scaleIn 6s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
   z-index: -10;
+  margin-right: 2em;
 }
 
 @media only screen and (max-width: 600px) {
