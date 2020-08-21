@@ -66,7 +66,7 @@ RockPaperScissors.prototype.decideWinner = function () {
 };
 
 /**
- *
+ * Adds ripple effect to the emelent that is passed
  * @param {DOMElement} element
  */
 RockPaperScissors.prototype.addRippleEffect = function (element) {

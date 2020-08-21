@@ -171,7 +171,7 @@
     position: absolute;
     bottom: 12em;
     border-radius: 50%;
-    background-color: deepskyblue !important;
+    background-color: $HeaderOutline !important;
     height: 25vh;
     width: 25vh;
     opacity: 0;
@@ -179,7 +179,17 @@
     z-index: -10;
 
     @include respond(tablet) {
-        display: none;
+    }
+
+    @include respond(mobile) {
+        position: absolute;
+        height: 16vh;
+        width: 16vh;
+        top: 33vh;
+    }
+
+    @include respond(small-mobile) {
+        top: 31vh;
     }
 }
 
