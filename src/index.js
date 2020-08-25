@@ -1,3 +1,12 @@
+/**
+ *
+ * @param {String} start -- id of the rock, paper and scissors selector
+ * @param {String} score -- id of the score DOMElement
+ * @param {String} active -- id of the section after selecting rock, paper or scissors
+ * @param {Object} players -- ids of the player card and the card selected by cpu(house)
+ * @param {String} result -- id of the play again text
+ * @param {String} playAgain -- id of the play again button
+ */
 function RockPaperScissors(start, score, active, players, result, playAgain) {
     this.start = document.querySelector(start);
     this.score = document.querySelector(score);
